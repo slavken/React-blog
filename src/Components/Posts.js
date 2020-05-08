@@ -38,9 +38,7 @@ export default class Posts extends Component {
         } else if (!isLoaded) {
             return <div className="mt-5">Loading...</div>;
         } else {
-            const content = posts.map((post, i) => {
-                    if (i >= 24) return;
-
+            const content = posts.slice(0, 25).map(post => {
                     const title = post.title.length > 40 ? post.title.substr(0, 40) + '...' : post.title;
                     return (
                         <Card 

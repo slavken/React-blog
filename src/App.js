@@ -7,18 +7,18 @@ import {
 import logo from './logo.svg';
 import './App.css';
 
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 // Routes
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Contacts from './Pages/Contacts';
-import Test from './Pages/Test';
-import Post from './Pages/Post';
-import User from './Pages/User';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contacts from './pages/Contacts';
+import Test from './pages/Test';
+import Post from './pages/Post';
+import User from './pages/User';
 
-// import { Alert } from './Components/Alert';
+// import { Alert } from './components/Alert';
 // <Alert alert={{text: 'Alert', type: 'success'}} />
 
 function App() {

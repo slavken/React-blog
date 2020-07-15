@@ -1,6 +1,6 @@
 import React from 'react';
-import Sidebar from '../Components/Sidebar';
-import { Card } from '../Components/Card';
+import Sidebar from '../components/Sidebar';
+import { Card } from '../components/Card';
 import { firstUpperCase } from '../functions';
 
 export default class Post extends React.Component {

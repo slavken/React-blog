@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Carousel from '../Components/Carousel';
-import Posts from '../Components/Posts';
-import Sidebar from '../Components/Sidebar';
+import Carousel from '../components/Carousel';
+import Posts from '../components/Posts';
+import Sidebar from '../components/Sidebar';
 
 export default class Home extends Component {
     render() {

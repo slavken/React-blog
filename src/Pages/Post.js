@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../Components/Sidebar';
+import Sidebar from '../components/Sidebar';
 import { firstUpperCase } from '../functions';
 import img from '../assets/default.png';
 

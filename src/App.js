@@ -4,8 +4,11 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import 'bootstrap';
+
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';

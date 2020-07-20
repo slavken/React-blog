@@ -1,3 +1,1 @@
-export const firstUpperCase = str => {
-    return str[0].toUpperCase() + str.slice(1);
-}
+export const firstUpperCase = str => str[0].toUpperCase() + str.slice(1);

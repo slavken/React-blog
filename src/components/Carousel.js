@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import slider from '../assets/slider.png';
 
 export default class Carousel extends Component {

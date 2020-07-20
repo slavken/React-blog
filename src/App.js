@@ -6,20 +6,19 @@ import {
 } from "react-router-dom";
 import 'bootstrap';
 
-import logo from './logo.svg';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-// Routes
 import Home from './pages/Home';
 import About from './pages/About';
 import Contacts from './pages/Contacts';
 import Test from './pages/Test';
 import Post from './pages/Post';
 import User from './pages/User';
+
+import logo from './logo.svg';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import { Alert } from './components/Alert';
 // <Alert alert={{text: 'Alert', type: 'success'}} />

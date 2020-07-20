@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Categories from './Categories';
 
 export default class Sidebar extends Component {

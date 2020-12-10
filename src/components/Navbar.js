@@ -53,4 +53,4 @@ export default class Navbar extends Component {
 
 Navbar.propTypes = {
     logo: PropTypes.string
-};
+}

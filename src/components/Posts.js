@@ -5,11 +5,12 @@ import { firstUpperCase } from '../functions';
 export default class Posts extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
             error: null,
             isLoaded: false,
             posts: []
-        };
+        }
     }
 
     componentDidMount() {

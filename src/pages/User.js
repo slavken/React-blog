@@ -6,20 +6,24 @@ import { firstUpperCase } from '../functions';
 export default class Post extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             error: null,
             isLoaded: false,
             user: [],
             posts: []
-        };
+        }
     }
 
     componentDidMount() {
         Promise.all([
-            fetch("https://jsonplaceholder.typicode.com/users/" + this.props.match.params.id),
-            fetch("https://jsonplaceholder.typicode.com/users/" + this.props.match.params.id + '/posts')
+            fetch('https://jsonplaceholder.typicode.com/users/' + this.props.match.params.id),
+            fetch(`https://jsonplaceholder.typicode.com/users/${this.props.match.params.id}/posts`)
         ])
-        .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+        .then(([res1, res2]) => Promise.all([
+            res1.json(),
+            res2.json()
+        ]))
         .then(([res1, res2]) => {
                 this.setState({
                     isLoaded: true,
@@ -38,6 +42,7 @@ export default class Post extends React.Component {
 
     render() {
         const { error, isLoaded, user, posts } = this.state;
+
         if (error) {
             return <div className="mt-5">Error: {error.message}</div>;
         } else if (!isLoaded) {
@@ -45,6 +50,7 @@ export default class Post extends React.Component {
         } else {
             const userPosts = posts.map(post => {
                     const title = post.title.length > 40 ? post.title.substr(0, 40) + '...' : post.title;
+
                     return (
                         <Card 
                             key={post.id}

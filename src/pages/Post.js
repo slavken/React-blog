@@ -6,21 +6,25 @@ import img from '../assets/default.png';
 export default class Post extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             error: null,
             isLoaded: false,
             post: [],
             user: [],
             comments: []
-        };
+        }
     }
 
     componentDidMount() {
         Promise.all([
-            fetch("https://jsonplaceholder.typicode.com/posts/" + this.props.match.params.id),
-            fetch("https://jsonplaceholder.typicode.com/posts/" + this.props.match.params.id + '/comments')
+            fetch('https://jsonplaceholder.typicode.com/posts/' + this.props.match.params.id),
+            fetch(`https://jsonplaceholder.typicode.com/posts/${this.props.match.params.id}/comments`)
         ])
-        .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+        .then(([res1, res2]) => Promise.all([
+            res1.json(),
+            res2.json()
+        ]))
         .then(([res1, res2]) => {
                 this.setState({
                     isLoaded: true,
@@ -28,7 +32,7 @@ export default class Post extends React.Component {
                     comments: res2
                 });
 
-                fetch("https://jsonplaceholder.typicode.com/users/" + res1.userId)
+                fetch('https://jsonplaceholder.typicode.com/users/' + res1.userId)
                 .then(res => res.json())
                 .then(
                     res => {
@@ -56,6 +60,7 @@ export default class Post extends React.Component {
 
     render() {
         const { error, isLoaded, post, user, comments } = this.state;
+
         if (error) {
             return <div className="mt-5">Error: {error.message}</div>;
         } else if (!isLoaded) {

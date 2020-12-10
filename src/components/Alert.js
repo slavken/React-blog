@@ -14,4 +14,4 @@ export const Alert = props => (
 
 Alert.propTypes = {
     alert: PropTypes.object
-};
+}

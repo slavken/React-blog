@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class Footer extends Component {
@@ -46,4 +46,4 @@ export default class Footer extends Component {
 
 Footer.propTypes = {
     logo: PropTypes.string
-};
+}
